@@ -92,7 +92,6 @@ static PCGLStage* _activeStage = nil;
 - (void)update:(NSTimeInterval)interval {
     // nothing here in default stage
     // only prepare marix
-    
     _projection = GLKMatrix4MakeOrtho(-_width/2, _width/2, -_height/2, _height/2, -1.0f, 5.0f);
     _projection = GLKMatrix4RotateZ(_projection, _rotation);
     _projection = GLKMatrix4Scale(_projection, _scaleX, _scaleY, 1);
