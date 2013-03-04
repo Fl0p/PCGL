@@ -7,7 +7,7 @@
 //
 
 #import "PCGLObject.h"
-
+#import "PCGLStage.h"
 
 
 @implementation PCGLObject
@@ -34,13 +34,7 @@
     GLKMatrix4 modelview = GLKMatrix4MakeTranslation(0, y, 0.f);
     _effect.transform.modelviewMatrix = modelview;
     
-    //GLfloat ratio = 1024.0f/768.0f;
-    //GLKMatrix4 projection = GLKMatrix4MakePerspective(45.0f, ratio, 0.1f, 20.0f);
-    
-    GLKMatrix4 projection = GLKMatrix4MakeOrtho(-102.4f, 102.4f, -76.8f, 76.8f, -1.0f, 5.0f);
-    
-    
-    _effect.transform.projectionMatrix = projection;
+    _effect.transform.projectionMatrix = [PCGLStage activeStage].projection;
 }
 
 
@@ -51,10 +45,10 @@
     
     
     static const GLfloat squareVertices[] = {
-        -10.5f, -10.5f,
-        10.5f, -10.5f,
-        -10.5f,  10.5f,
-        10.5f,  10.5f
+        -100.0f, -100.0f,
+        100.0f, -100.0f,
+        -100.0f,  100.0f,
+        100.0f,  100.0f
     };
     
     static const GLubyte squareColors[] = {

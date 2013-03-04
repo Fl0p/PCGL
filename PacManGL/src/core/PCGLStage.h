@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <GLKit/GLKit.h>
+
 
 @interface PCGLStage : NSObject {
     
@@ -23,6 +25,10 @@
 @property (nonatomic, assign) float scaleX;
 @property (nonatomic, assign) float scaleY;
 
+@property (nonatomic, readonly) GLKMatrix4 projection;
+
+
+-(void)update:(NSTimeInterval)interval;
 
 -(void)activate;
 

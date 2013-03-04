@@ -33,6 +33,7 @@ static PCGLStage* _activeStage = nil;
 @synthesize scaleX = _scaleX;
 @synthesize scaleY = _scaleY;
 
+@synthesize projection = _projection;
 
 -(id)init {
     [NSException raise:@"PCGLStage" format:@"unapropriet init"];
@@ -42,7 +43,13 @@ static PCGLStage* _activeStage = nil;
 -(id)init_ {
     if (self = [super init]) {
         self.stages = [[NSMutableDictionary alloc] init];
-        _activeStage = self;        
+        _activeStage = self;
+        self.width = 1.0f; //?
+        self.height = 1.0f; //?
+        self.rotation = 0.0f;
+        self.scaleX = 1.0f;
+        self.scaleY = 1.0f;
+        
     }
     return self;
 }
@@ -81,6 +88,16 @@ static PCGLStage* _activeStage = nil;
     _activeStage = self;
 }
 
+
+- (void)update:(NSTimeInterval)interval {
+    // nothing here in default stage
+    // only prepare marix
+    
+    _projection = GLKMatrix4MakeOrtho(-_width/2, _width/2, -_height/2, _height/2, -1.0f, 5.0f);
+    _projection = GLKMatrix4RotateZ(_projection, _rotation);
+    _projection = GLKMatrix4Scale(_projection, _scaleX, _scaleY, 1);
+
+}
 
 +(PCGLStage*)createStage:(Class)stage_class forKey:(NSString*)key {
     PCGLStage* newStage = [[[stage_class alloc] init_] autorelease];

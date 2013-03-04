@@ -7,7 +7,7 @@
 //
 
 #import "PCGLRootViewController.h"
-
+#import "PCGLStage.h"
 #import "PCGLObject.h"
 
 @interface PCGLRootViewController ()
@@ -31,6 +31,7 @@
         // Custom initialization
         self.preferredFramesPerSecond = 30;
         self.delegate = self;
+        
         
         //GLKView *glkView = (GLKView *)self.view;
         //glkView.delegate = self;
@@ -62,7 +63,8 @@
     
     NSLog(@"context %@ ",view.context);
     
-    
+    [PCGLStage defaultStage].width = view.frame.size.width;
+    [PCGLStage defaultStage].height = view.frame.size.height;
     
     //self.view.enableSetNeedsDisplay = NO;
     //CADisplayLink* displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(render:)];
@@ -77,6 +79,9 @@
 
 - (void)glkViewControllerUpdate:(GLKViewController *)controller {
     //NSLog(@"update");
+    
+    [[PCGLStage activeStage] update:self.timeSinceLastUpdate];
+    
     [_object update:self.timeSinceLastUpdate];
 }
 - (void)glkViewController:(GLKViewController *)controller willPause:(BOOL)pause {
