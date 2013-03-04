@@ -1,0 +1,336 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB008C4916D154DA00AE22BC /* PCGLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DB008C4616D154DA00AE22BC /* PCGLObject.m */; };
+		DB008C4A16D154DA00AE22BC /* PCGLRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB008C4816D154DA00AE22BC /* PCGLRootViewController.m */; };
+		DB008C4D16D15CE300AE22BC /* PCGLGameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DB008C4C16D15CE300AE22BC /* PCGLGameObject.m */; };
+		DB35E6EF16D6BB1E0023320F /* PCGLGameSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = DB35E6EE16D6BB1E0023320F /* PCGLGameSprite.m */; };
+		DB3937FE16E3E9EA005DEEB1 /* PCGLObjectContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3937FD16E3E9EA005DEEB1 /* PCGLObjectContainer.m */; };
+		DBBB1C4416CDA4E20026EDF0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBB1C4316CDA4E20026EDF0 /* QuartzCore.framework */; };
+		DBE472A416B41F4F0098BD80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE472A316B41F4F0098BD80 /* UIKit.framework */; };
+		DBE472A616B41F4F0098BD80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE472A516B41F4F0098BD80 /* Foundation.framework */; };
+		DBE472A816B41F4F0098BD80 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE472A716B41F4F0098BD80 /* CoreGraphics.framework */; };
+		DBE472AE16B41F4F0098BD80 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBE472AC16B41F4F0098BD80 /* InfoPlist.strings */; };
+		DBE472B016B41F4F0098BD80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE472AF16B41F4F0098BD80 /* main.m */; };
+		DBE472B416B41F4F0098BD80 /* PCGLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE472B316B41F4F0098BD80 /* PCGLAppDelegate.m */; };
+		DBE472BA16B41F4F0098BD80 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBE472B916B41F4F0098BD80 /* Default-568h@2x.png */; };
+		DBE472CA16B42BC20098BD80 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE472C816B42BC20098BD80 /* GLKit.framework */; };
+		DBE472CB16B42BC20098BD80 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE472C916B42BC20098BD80 /* OpenGLES.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DB008C4516D154DA00AE22BC /* PCGLObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PCGLObject.h; path = src/core/PCGLObject.h; sourceTree = "<group>"; };
+		DB008C4616D154DA00AE22BC /* PCGLObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PCGLObject.m; path = src/core/PCGLObject.m; sourceTree = "<group>"; };
+		DB008C4716D154DA00AE22BC /* PCGLRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PCGLRootViewController.h; path = src/core/PCGLRootViewController.h; sourceTree = "<group>"; };
+		DB008C4816D154DA00AE22BC /* PCGLRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PCGLRootViewController.m; path = src/core/PCGLRootViewController.m; sourceTree = "<group>"; };
+		DB008C4B16D15CE300AE22BC /* PCGLGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PCGLGameObject.h; path = src/core/PCGLGameObject.h; sourceTree = "<group>"; };
+		DB008C4C16D15CE300AE22BC /* PCGLGameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PCGLGameObject.m; path = src/core/PCGLGameObject.m; sourceTree = "<group>"; };
+		DB35E6ED16D6BB1E0023320F /* PCGLGameSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCGLGameSprite.h; sourceTree = "<group>"; };
+		DB35E6EE16D6BB1E0023320F /* PCGLGameSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCGLGameSprite.m; sourceTree = "<group>"; };
+		DB3937FC16E3E9EA005DEEB1 /* PCGLObjectContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PCGLObjectContainer.h; path = src/core/PCGLObjectContainer.h; sourceTree = "<group>"; };
+		DB3937FD16E3E9EA005DEEB1 /* PCGLObjectContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PCGLObjectContainer.m; path = src/core/PCGLObjectContainer.m; sourceTree = "<group>"; };
+		DBBB1C4316CDA4E20026EDF0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DBE4729F16B41F4F0098BD80 /* PacManGL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PacManGL.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBE472A316B41F4F0098BD80 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DBE472A516B41F4F0098BD80 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DBE472A716B41F4F0098BD80 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DBE472AB16B41F4F0098BD80 /* PacManGL-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PacManGL-Info.plist"; sourceTree = "<group>"; };
+		DBE472AD16B41F4F0098BD80 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DBE472AF16B41F4F0098BD80 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DBE472B116B41F4F0098BD80 /* PacManGL-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PacManGL-Prefix.pch"; sourceTree = "<group>"; };
+		DBE472B216B41F4F0098BD80 /* PCGLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCGLAppDelegate.h; sourceTree = "<group>"; };
+		DBE472B316B41F4F0098BD80 /* PCGLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCGLAppDelegate.m; sourceTree = "<group>"; };
+		DBE472B516B41F4F0098BD80 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		DBE472B716B41F4F0098BD80 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		DBE472B916B41F4F0098BD80 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DBE472C816B42BC20098BD80 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		DBE472C916B42BC20098BD80 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DBE4729C16B41F4F0098BD80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBBB1C4416CDA4E20026EDF0 /* QuartzCore.framework in Frameworks */,
+				DBE472CA16B42BC20098BD80 /* GLKit.framework in Frameworks */,
+				DBE472CB16B42BC20098BD80 /* OpenGLES.framework in Frameworks */,
+				DBE472A416B41F4F0098BD80 /* UIKit.framework in Frameworks */,
+				DBE472A616B41F4F0098BD80 /* Foundation.framework in Frameworks */,
+				DBE472A816B41F4F0098BD80 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB008C4416D1548300AE22BC /* core */ = {
+			isa = PBXGroup;
+			children = (
+				DB008C4516D154DA00AE22BC /* PCGLObject.h */,
+				DB008C4616D154DA00AE22BC /* PCGLObject.m */,
+				DB008C4716D154DA00AE22BC /* PCGLRootViewController.h */,
+				DB008C4816D154DA00AE22BC /* PCGLRootViewController.m */,
+				DB35E6ED16D6BB1E0023320F /* PCGLGameSprite.h */,
+				DB35E6EE16D6BB1E0023320F /* PCGLGameSprite.m */,
+				DB008C4B16D15CE300AE22BC /* PCGLGameObject.h */,
+				DB008C4C16D15CE300AE22BC /* PCGLGameObject.m */,
+				DB3937FC16E3E9EA005DEEB1 /* PCGLObjectContainer.h */,
+				DB3937FD16E3E9EA005DEEB1 /* PCGLObjectContainer.m */,
+			);
+			name = core;
+			sourceTree = "<group>";
+		};
+		DBE4729416B41F4F0098BD80 = {
+			isa = PBXGroup;
+			children = (
+				DBE472A916B41F4F0098BD80 /* PacManGL */,
+				DBE472A216B41F4F0098BD80 /* Frameworks */,
+				DBE472A016B41F4F0098BD80 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DBE472A016B41F4F0098BD80 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DBE4729F16B41F4F0098BD80 /* PacManGL.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBE472A216B41F4F0098BD80 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBBB1C4316CDA4E20026EDF0 /* QuartzCore.framework */,
+				DBE472C816B42BC20098BD80 /* GLKit.framework */,
+				DBE472C916B42BC20098BD80 /* OpenGLES.framework */,
+				DBE472A316B41F4F0098BD80 /* UIKit.framework */,
+				DBE472A516B41F4F0098BD80 /* Foundation.framework */,
+				DBE472A716B41F4F0098BD80 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBE472A916B41F4F0098BD80 /* PacManGL */ = {
+			isa = PBXGroup;
+			children = (
+				DBE472C016B41F830098BD80 /* src */,
+				DBE472B216B41F4F0098BD80 /* PCGLAppDelegate.h */,
+				DBE472B316B41F4F0098BD80 /* PCGLAppDelegate.m */,
+				DBE472AA16B41F4F0098BD80 /* Supporting Files */,
+			);
+			path = PacManGL;
+			sourceTree = "<group>";
+		};
+		DBE472AA16B41F4F0098BD80 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBE472AB16B41F4F0098BD80 /* PacManGL-Info.plist */,
+				DBE472AC16B41F4F0098BD80 /* InfoPlist.strings */,
+				DBE472AF16B41F4F0098BD80 /* main.m */,
+				DBE472B116B41F4F0098BD80 /* PacManGL-Prefix.pch */,
+				DBE472B516B41F4F0098BD80 /* Default.png */,
+				DBE472B716B41F4F0098BD80 /* Default@2x.png */,
+				DBE472B916B41F4F0098BD80 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DBE472C016B41F830098BD80 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				DB008C4416D1548300AE22BC /* core */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DBE4729E16B41F4F0098BD80 /* PacManGL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBE472BD16B41F4F0098BD80 /* Build configuration list for PBXNativeTarget "PacManGL" */;
+			buildPhases = (
+				DBE4729B16B41F4F0098BD80 /* Sources */,
+				DBE4729C16B41F4F0098BD80 /* Frameworks */,
+				DBE4729D16B41F4F0098BD80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PacManGL;
+			productName = PacManGL;
+			productReference = DBE4729F16B41F4F0098BD80 /* PacManGL.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DBE4729616B41F4F0098BD80 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PCGL;
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = DBE4729916B41F4F0098BD80 /* Build configuration list for PBXProject "PacManGL" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DBE4729416B41F4F0098BD80;
+			productRefGroup = DBE472A016B41F4F0098BD80 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DBE4729E16B41F4F0098BD80 /* PacManGL */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DBE4729D16B41F4F0098BD80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBE472AE16B41F4F0098BD80 /* InfoPlist.strings in Resources */,
+				DBE472BA16B41F4F0098BD80 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DBE4729B16B41F4F0098BD80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBE472B016B41F4F0098BD80 /* main.m in Sources */,
+				DBE472B416B41F4F0098BD80 /* PCGLAppDelegate.m in Sources */,
+				DB008C4916D154DA00AE22BC /* PCGLObject.m in Sources */,
+				DB008C4A16D154DA00AE22BC /* PCGLRootViewController.m in Sources */,
+				DB008C4D16D15CE300AE22BC /* PCGLGameObject.m in Sources */,
+				DB35E6EF16D6BB1E0023320F /* PCGLGameSprite.m in Sources */,
+				DB3937FE16E3E9EA005DEEB1 /* PCGLObjectContainer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DBE472AC16B41F4F0098BD80 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBE472AD16B41F4F0098BD80 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DBE472BB16B41F4F0098BD80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		DBE472BC16B41F4F0098BD80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DBE472BE16B41F4F0098BD80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PacManGL/PacManGL-Prefix.pch";
+				INFOPLIST_FILE = "PacManGL/PacManGL-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DBE472BF16B41F4F0098BD80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PacManGL/PacManGL-Prefix.pch";
+				INFOPLIST_FILE = "PacManGL/PacManGL-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DBE4729916B41F4F0098BD80 /* Build configuration list for PBXProject "PacManGL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBE472BB16B41F4F0098BD80 /* Debug */,
+				DBE472BC16B41F4F0098BD80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBE472BD16B41F4F0098BD80 /* Build configuration list for PBXNativeTarget "PacManGL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBE472BE16B41F4F0098BD80 /* Debug */,
+				DBE472BF16B41F4F0098BD80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DBE4729616B41F4F0098BD80 /* Project object */;
+}
