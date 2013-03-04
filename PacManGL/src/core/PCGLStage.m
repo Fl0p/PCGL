@@ -27,6 +27,12 @@ static PCGLStage* _activeStage = nil;
 
 @synthesize stages = _stages;
 
+@synthesize width = _width;
+@synthesize height = _height;
+@synthesize rotation = _rotation;
+@synthesize scaleX = _scaleX;
+@synthesize scaleY = _scaleY;
+
 
 -(id)init {
     [NSException raise:@"PCGLStage" format:@"unapropriet init"];

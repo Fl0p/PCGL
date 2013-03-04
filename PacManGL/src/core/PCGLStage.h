@@ -10,8 +10,19 @@
 
 @interface PCGLStage : NSObject {
     
-
+    
+    
 }
+
+
+@property (nonatomic, assign) float width;
+@property (nonatomic, assign) float height;
+
+@property (nonatomic, assign) float rotation;
+
+@property (nonatomic, assign) float scaleX;
+@property (nonatomic, assign) float scaleY;
+
 
 -(void)activate;
 
