@@ -12,6 +12,7 @@
 		DB008C4D16D15CE300AE22BC /* PCGLGameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DB008C4C16D15CE300AE22BC /* PCGLGameObject.m */; };
 		DB35E6EF16D6BB1E0023320F /* PCGLGameSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = DB35E6EE16D6BB1E0023320F /* PCGLGameSprite.m */; };
 		DB3937FE16E3E9EA005DEEB1 /* PCGLObjectContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3937FD16E3E9EA005DEEB1 /* PCGLObjectContainer.m */; };
+		DB39380116E53838005DEEB1 /* PCGLStage.m in Sources */ = {isa = PBXBuildFile; fileRef = DB39380016E53838005DEEB1 /* PCGLStage.m */; };
 		DBBB1C4416CDA4E20026EDF0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBB1C4316CDA4E20026EDF0 /* QuartzCore.framework */; };
 		DBE472A416B41F4F0098BD80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE472A316B41F4F0098BD80 /* UIKit.framework */; };
 		DBE472A616B41F4F0098BD80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE472A516B41F4F0098BD80 /* Foundation.framework */; };
@@ -35,6 +36,8 @@
 		DB35E6EE16D6BB1E0023320F /* PCGLGameSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCGLGameSprite.m; sourceTree = "<group>"; };
 		DB3937FC16E3E9EA005DEEB1 /* PCGLObjectContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PCGLObjectContainer.h; path = src/core/PCGLObjectContainer.h; sourceTree = "<group>"; };
 		DB3937FD16E3E9EA005DEEB1 /* PCGLObjectContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PCGLObjectContainer.m; path = src/core/PCGLObjectContainer.m; sourceTree = "<group>"; };
+		DB3937FF16E53838005DEEB1 /* PCGLStage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PCGLStage.h; path = src/core/PCGLStage.h; sourceTree = "<group>"; };
+		DB39380016E53838005DEEB1 /* PCGLStage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PCGLStage.m; path = src/core/PCGLStage.m; sourceTree = "<group>"; };
 		DBBB1C4316CDA4E20026EDF0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DBE4729F16B41F4F0098BD80 /* PacManGL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PacManGL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE472A316B41F4F0098BD80 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -83,6 +86,8 @@
 				DB008C4C16D15CE300AE22BC /* PCGLGameObject.m */,
 				DB3937FC16E3E9EA005DEEB1 /* PCGLObjectContainer.h */,
 				DB3937FD16E3E9EA005DEEB1 /* PCGLObjectContainer.m */,
+				DB3937FF16E53838005DEEB1 /* PCGLStage.h */,
+				DB39380016E53838005DEEB1 /* PCGLStage.m */,
 			);
 			name = core;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 				DB008C4D16D15CE300AE22BC /* PCGLGameObject.m in Sources */,
 				DB35E6EF16D6BB1E0023320F /* PCGLGameSprite.m in Sources */,
 				DB3937FE16E3E9EA005DEEB1 /* PCGLObjectContainer.m in Sources */,
+				DB39380116E53838005DEEB1 /* PCGLStage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

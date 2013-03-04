@@ -39,6 +39,7 @@
     
     GLKMatrix4 projection = GLKMatrix4MakeOrtho(-102.4f, 102.4f, -76.8f, 76.8f, -1.0f, 5.0f);
     
+    
     _effect.transform.projectionMatrix = projection;
 }
 
