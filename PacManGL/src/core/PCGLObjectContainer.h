@@ -7,9 +7,11 @@
 //
 
 #import "PCGLObject.h"
+#import "PCGLObject+Container.h"
+
 
 @interface PCGLObjectContainer : PCGLObject {
-
+        //TODO need fast array?
         NSMutableArray *_children;
     
 }

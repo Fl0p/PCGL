@@ -9,6 +9,7 @@
 #import "PCGLRootViewController.h"
 #import "PCGLStage.h"
 #import "PCGLObject.h"
+#import "PCGLObjectContainer.h"
 
 @interface PCGLRootViewController ()
 
@@ -17,7 +18,7 @@
 @end
 
 @implementation PCGLRootViewController {
-    PCGLObject* _object;
+    PCGLObjectContainer* _container;
 
 }
 
@@ -36,7 +37,21 @@
         //GLKView *glkView = (GLKView *)self.view;
         //glkView.delegate = self;
         //glkView.context = aContext;
-        _object = [[PCGLObject alloc] init];
+        _container = [[PCGLObjectContainer alloc] init];
+        
+        
+        for (int i = 0; i < 1000; i++) {
+            PCGLObject* obj = [[[PCGLObject alloc] init] autorelease];
+            obj.x = -500.0f  + (float) (arc4random() % 1000);
+            obj.y = -500.0f  + (float) (arc4random() % 1000);
+            obj.scaleX = 0.1f;
+            obj.scaleY = 0.1f;
+            obj.rotation = (float) (arc4random() % 360) / 180.f * M_1_PI;
+            
+            [_container addChild:obj];
+        }
+        NSLog(@"_cnt %d",_container.numChildren);
+        
     }
     return self;
 }
@@ -81,8 +96,8 @@
     //NSLog(@"update");
     
     [[PCGLStage activeStage] update:self.timeSinceLastUpdate];
-    
-    [_object update:self.timeSinceLastUpdate];
+    _container.rotation = _container.rotation + 0.01f;
+    [_container update:self.timeSinceLastUpdate];
 }
 - (void)glkViewController:(GLKViewController *)controller willPause:(BOOL)pause {
     NSLog(@"pause");
@@ -96,7 +111,9 @@
     glClearColor(0.0, 0.0, 0.5, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
     
-    [_object drawInRect:rect];
+    [_container drawInRect:rect];
+    
+    
 }
 
 

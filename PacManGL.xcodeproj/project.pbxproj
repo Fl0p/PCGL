@@ -23,6 +23,7 @@
 		DBE472BA16B41F4F0098BD80 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBE472B916B41F4F0098BD80 /* Default-568h@2x.png */; };
 		DBE472CA16B42BC20098BD80 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE472C816B42BC20098BD80 /* GLKit.framework */; };
 		DBE472CB16B42BC20098BD80 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE472C916B42BC20098BD80 /* OpenGLES.framework */; };
+		DBEEAFA916EE855D00B2B426 /* PCGLObject+Container.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEEAFA816EE855D00B2B426 /* PCGLObject+Container.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,8 @@
 		DBE472B916B41F4F0098BD80 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DBE472C816B42BC20098BD80 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		DBE472C916B42BC20098BD80 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		DBEEAFA716EE855C00B2B426 /* PCGLObject+Container.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PCGLObject+Container.h"; path = "src/core/PCGLObject+Container.h"; sourceTree = "<group>"; };
+		DBEEAFA816EE855D00B2B426 /* PCGLObject+Container.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "PCGLObject+Container.m"; path = "src/core/PCGLObject+Container.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,8 @@
 			children = (
 				DB008C4516D154DA00AE22BC /* PCGLObject.h */,
 				DB008C4616D154DA00AE22BC /* PCGLObject.m */,
+				DBEEAFA716EE855C00B2B426 /* PCGLObject+Container.h */,
+				DBEEAFA816EE855D00B2B426 /* PCGLObject+Container.m */,
 				DB008C4716D154DA00AE22BC /* PCGLRootViewController.h */,
 				DB008C4816D154DA00AE22BC /* PCGLRootViewController.m */,
 				DB35E6ED16D6BB1E0023320F /* PCGLGameSprite.h */,
@@ -226,6 +231,7 @@
 				DB35E6EF16D6BB1E0023320F /* PCGLGameSprite.m in Sources */,
 				DB3937FE16E3E9EA005DEEB1 /* PCGLObjectContainer.m in Sources */,
 				DB39380116E53838005DEEB1 /* PCGLStage.m in Sources */,
+				DBEEAFA916EE855D00B2B426 /* PCGLObject+Container.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

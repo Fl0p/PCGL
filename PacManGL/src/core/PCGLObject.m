@@ -8,16 +8,29 @@
 
 #import "PCGLObject.h"
 #import "PCGLStage.h"
-
+#import "PCGLObjectContainer.h"
 
 @implementation PCGLObject
 
+@synthesize x = _x;
+@synthesize y = _y;
+@synthesize z = _z;
+@synthesize rotation = _rotation;
+@synthesize scaleX = _scaleX;
+@synthesize scaleY = _scaleY;
 
 
 -(id)init {
     if (self = [super init]) {
-    
+        
+        _x = 0;
+        _y = 0;
+        _z = 0;
+        _rotation = 0;
+        _scaleX = 1;
+        _scaleY = 1;
         _effect = [[GLKBaseEffect alloc] init];
+        _matrix = GLKMatrix4Identity;
     
     }
 
@@ -26,14 +39,23 @@
 }
 
 
+-(GLKMatrix4)matrix {
+    return _matrix;
+}
+
 - (void)update:(NSTimeInterval)interval {
-    static float transY = 0.0f;
-    float y = sinf(transY)/2.0f;
-    transY += 0.175f;
     
-    GLKMatrix4 modelview = GLKMatrix4MakeTranslation(0, y, 0.f);
+    GLKMatrix4 modelview = GLKMatrix4Identity;
+    if (self.parent) {
+        modelview = self.parent.matrix;
+    }
+    
+    modelview = GLKMatrix4Translate(modelview, _x, _y, _z);
+    modelview = GLKMatrix4RotateZ(modelview, _rotation);
+    modelview = GLKMatrix4Scale(modelview, _scaleX, _scaleY, 1);
+    _matrix = modelview;
+    
     _effect.transform.modelviewMatrix = modelview;
-    
     _effect.transform.projectionMatrix = [PCGLStage activeStage].projection;
 }
 
@@ -43,12 +65,18 @@
     
     [_effect prepareToDraw];
     
+    glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
+    glEnable(GL_BLEND);
     
-    static const GLfloat squareVertices[] = {
-        -100.0f, -100.0f,
-        100.0f, -100.0f,
-        -100.0f,  100.0f,
-        100.0f,  100.0f
+    glEnableVertexAttribArray(GLKVertexAttribPosition);
+    glEnableVertexAttribArray(GLKVertexAttribColor);
+    
+
+    static const GLbyte squareVertices[] = {
+        -100, -100,
+        100, -100,
+        -100,  100,
+        100,  100
     };
     
     static const GLubyte squareColors[] = {
@@ -57,20 +85,15 @@
         0,     0,   0,   0,
         255,   0, 255, 255,
     };
-
-    glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
-    glEnable(GL_BLEND);
     
-    glEnableVertexAttribArray(GLKVertexAttribPosition);
-    glEnableVertexAttribArray(GLKVertexAttribColor);
-    
-    glVertexAttribPointer(GLKVertexAttribPosition, 2, GL_FLOAT, GL_FALSE, 0, squareVertices);
+    glVertexAttribPointer(GLKVertexAttribPosition, 2, GL_BYTE, GL_FALSE, 0, squareVertices);
     glVertexAttribPointer(GLKVertexAttribColor, 4, GL_UNSIGNED_BYTE, GL_TRUE, 0, squareColors);
     
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
     
     glDisableVertexAttribArray(GLKVertexAttribPosition);
     glDisableVertexAttribArray(GLKVertexAttribColor);
+    
 }
 
 

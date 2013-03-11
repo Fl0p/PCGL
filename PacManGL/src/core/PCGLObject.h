@@ -12,7 +12,19 @@
 
 @interface PCGLObject : NSObject {
     GLKBaseEffect* _effect;
+    GLKMatrix4 _matrix;
+    
 }
+
+
+@property(nonatomic, assign) float x;
+@property(nonatomic, assign) float y;
+@property(nonatomic, assign) float z;
+@property(nonatomic, assign) float rotation;
+@property(nonatomic, assign) float scaleX;
+@property(nonatomic, assign) float scaleY;
+
+@property(nonatomic, readonly) GLKMatrix4 matrix;
 
 
 @property(readonly) int numVertices;

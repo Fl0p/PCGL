@@ -9,10 +9,22 @@
 #import "PCGLObjectContainer.h"
 
 
+@interface PCGLObjectContainer ()
+
+
+@end
 
 
 @implementation PCGLObjectContainer
 
+
+
+-(id)init{
+    if (self = [super init]) {
+        _children = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
 
 -(void)dealloc {
     [self removeAllChildren];
@@ -21,37 +33,35 @@
     [super dealloc];
 }
 
-- (NSMutableArray *)children {
-    if (!_children) {
-        _children = [[NSMutableArray alloc] init];
-    }
-    return nil;
-}
-
 
 - (NSUInteger)numChildren {
-    return self.children.count;
+    return _children.count;
 }
 
 - (PCGLObject *)childAt:(NSUInteger)index {
-    return [self.children objectAtIndex:index];
+    return [_children objectAtIndex:index];
 }
 
 - (void)addChild:(PCGLObject *)child {
-    [self.children addObject:child];
+    child.parent = self;
+    [_children addObject:child];
 }
 
 - (void)addChild:(PCGLObject *)child at:(NSUInteger)index {
-    [self.children insertObject:child atIndex:index];
+    child.parent = self;    
+    [_children insertObject:child atIndex:index];
 }
 
 - (void)removeAllChildren {
-    [self.children removeAllObjects];
+    [_children removeAllObjects];
+    
+    //TODO remove parent
 }
 
 - (PCGLObject *)removeChildAt:(NSUInteger)index {
-    PCGLObject *child = [self.children objectAtIndex:index];
-    [self.children removeObjectAtIndex:index];
+    PCGLObject *child = [_children objectAtIndex:index];
+    [_children removeObjectAtIndex:index];
+    child.parent = nil; // will it work?
     return child;
 }
 
