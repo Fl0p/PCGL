@@ -88,7 +88,7 @@
     
     glVertexAttribPointer(GLKVertexAttribPosition, 2, GL_BYTE, GL_FALSE, 0, squareVertices);
     glVertexAttribPointer(GLKVertexAttribColor, 4, GL_UNSIGNED_BYTE, GL_TRUE, 0, squareColors);
-    
+
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
     
     glDisableVertexAttribArray(GLKVertexAttribPosition);

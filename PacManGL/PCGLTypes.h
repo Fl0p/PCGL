@@ -16,9 +16,8 @@ typedef struct {
     GLKVector3 position;
 } PCGLVertex;
 
-
-
-
+#define PCGLVertexStride sizeof(PCGLVertex)
+#define PCGLVertexPtrPosition (GLvoid*) 0
 
 // PCGLVertexColored
 typedef struct {
@@ -26,10 +25,21 @@ typedef struct {
     GLKVector4 color;
 } PCGLVertexColored;
 
+
+#define PCGLVertexColoredStride sizeof(PCGLVertexColored)
+#define PCGLVertexColoredPtrPosition (GLvoid*) 0
+#define PCGLVertexColoredPtrColor (GLvoid*) sizeof(GLKVector3)
+
 typedef struct {
     GLKVector3 position;
     GLKVector2 texCoord;
 } PCGLVertexTextured;
+
+
+#define PCGLVertexTexturedStride sizeof(PCGLVertexTextured)
+#define PCGLVertexTexturedPtrPosition (GLvoid*) 0
+#define PCGLVertexTexturedPtrTexCoord (GLvoid*) sizeof(GLKVector3)
+
 
 typedef struct {
     GLKVector3 position;
@@ -37,8 +47,10 @@ typedef struct {
     GLKVector2 texCoord;
 } PCGLVertexColoredTextured;
 
-
-
+#define PCGLVertexColoredTexturedStride sizeof(PCGLVertexColoredTextured)
+#define PCGLVertexColoredTexturedPtrPosition (GLvoid*) 0
+#define PCGLVertexColoredTexturedPtrColor (GLvoid*) sizeof(GLKVector3)
+#define PCGLVertexColoredTexturedPtrTexCoord (GLvoid*) sizeof(GLKVector3) + sizeof(GLKVector4)
 
 
 
