@@ -57,6 +57,7 @@
 		DBE472C916B42BC20098BD80 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		DBEEAFA716EE855C00B2B426 /* PCGLObject+Container.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PCGLObject+Container.h"; path = "src/core/PCGLObject+Container.h"; sourceTree = "<group>"; };
 		DBEEAFA816EE855D00B2B426 /* PCGLObject+Container.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "PCGLObject+Container.m"; path = "src/core/PCGLObject+Container.m"; sourceTree = "<group>"; };
+		DBEEAFAA16EF366600B2B426 /* PCGLTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCGLTypes.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +94,7 @@
 				DB3937FD16E3E9EA005DEEB1 /* PCGLObjectContainer.m */,
 				DB3937FF16E53838005DEEB1 /* PCGLStage.h */,
 				DB39380016E53838005DEEB1 /* PCGLStage.m */,
+				DBEEAFAA16EF366600B2B426 /* PCGLTypes.h */,
 			);
 			name = core;
 			sourceTree = "<group>";
